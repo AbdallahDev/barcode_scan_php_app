@@ -9,7 +9,7 @@ class location extends my_db {
                 . "WHERE location.location_barcode = ?";
         $datatypes = "s";
         $vars = array(&$location_barcode);
-        $this->get_data($query, $datatypes, $vars);
+        return $this->get_data($query, $datatypes, $vars);
     }
 
 }
