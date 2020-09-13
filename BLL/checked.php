@@ -20,7 +20,7 @@ class checked extends my_db {
                 . "WHERE transaction.user_id = ?";
         $datatypes = "i";
         $vars = array(&$user_id);
-        $this->get_data($query, $datatypes, $vars);
+        return $this->get_data($query, $datatypes, $vars);
     }
 
 }
