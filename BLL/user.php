@@ -14,7 +14,7 @@ class user extends my_db {
     }
 
     function get_user($user_id) {
-        $query = 'SELECT USER.user_name, user.userType_id FROM `user` WHERE user.user_id = ?';
+        $query = 'SELECT USER.user_id, USER.user_name, user.userType_id FROM `user` WHERE user.user_id = ?';
         $datatypes = "i";
         $vars = array(&$user_id);
         return $this->get_data($query, $datatypes, $vars);
