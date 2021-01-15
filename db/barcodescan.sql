@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 14, 2021 at 07:00 PM
+-- Generation Time: Jan 14, 2021 at 07:20 PM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -71,17 +71,18 @@ INSERT INTO `location` (`location_id`, `location_name`, `location_barcode`) VALU
 
 CREATE TABLE `product` (
   `product_id` int(11) NOT NULL,
-  `product_name` varchar(50) NOT NULL
+  `product_name` varchar(50) NOT NULL,
+  `product_price` decimal(10,0) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `product`
 --
 
-INSERT INTO `product` (`product_id`, `product_name`) VALUES
-(1, 'Cake'),
-(2, 'Cellphone'),
-(3, 'Laptop');
+INSERT INTO `product` (`product_id`, `product_name`, `product_price`) VALUES
+(1, 'Cake', '10'),
+(2, 'Cellphone', '100'),
+(3, 'Laptop', '1000');
 
 -- --------------------------------------------------------
 
